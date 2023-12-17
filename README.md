@@ -59,27 +59,43 @@ Follow these steps to set up and run the project locally:
 4. Test the API using your preferred method (e.g., Postman, curl).
 
 API Endpoints
-#List Cars
+
+
+
+#List Cars 
    Endpoint: GET /cars
    Description: Retrieve the list of cars.
    Response:[{"ID": 1, "Model": "Sedan", "Status": "In Garage"},"ID": 2, "Model": "SUV", "Status": "In Garage"},...]
-#Add Car
-   Endpoint: POST /cars
-   Description: Add a new car to the collection.
-   Request Body: json
-   {"Model": "Convertible", "Status": "In Garage"}
-   Response:json 
-   {"ID": 3, "Model": "Convertible", "Status": "In Garage"}
+
+   
+#Add Car 
+   Endpoint: POST /cars 
+   Description: Add a new car to the collection. 
+   Request Body: json 
+   {"Model": "Convertible", "Status": "In Garage"} 
+   Response:json  
+   {"ID": 3, "Model": "Convertible", "Status": "In Garage"} 
+
+   
 #Update Car Repair Status
    Endpoint: PUT /cars/:id/repair
    Description: Set a car's status to "Under Repair."
    Response:json
    {"ID": 1, "Model": "Sedan", "Status": "Under Repair"}
+
+
+   
 #Remove Car
    Endpoint: DELETE /cars/:id
    Description: Remove a car from the collection.
    Response:json
    {"ID": 2, "Model": "SUV", "Status": "In Garage"}
+
+
+
+
+
+   
 
 
 **********// CODE EXPLAINATION //*************
@@ -181,15 +197,35 @@ func RemoveCar(ctx *gofr.Context) (interface{}, error) {
 *Returns the removed car as a response.
 
 
+
+
+
+
+
+
 ***********// SCREENSHOTS OF RESPONSE AND POSTMAN //**************
 
 This shows the car entry in localhost server on port 8000
+
+
 ![Screenshot 2023-12-17 at 3 49 07 PM](https://github.com/Nilabh2121/Zopsmart_Assignment_Nilabhkumar/assets/74805255/57b62e0a-90ef-44f6-b21d-9fd3395c66bf)
+
+
 This shows the postman Create API sucessfully running by getting the cars models and id 
+
+
 ![Screenshot 2023-12-17 at 3 57 49 PM](https://github.com/Nilabh2121/Zopsmart_Assignment_Nilabhkumar/assets/74805255/cef03cde-3ac1-401d-b44d-bf437584710a)
+
+
 This shows that Add cars Api sucessfully running and able to update the car according to the need
+
+
 ![Screenshot 2023-12-17 at 4 01 17 PM](https://github.com/Nilabh2121/Zopsmart_Assignment_Nilabhkumar/assets/74805255/109d1d62-f737-4e1b-b68f-07c3a7fd8092)
+
+
 This shows that Delete operation in the database
+
+
 ![Screenshot 2023-12-17 at 9 17 52 PM](https://github.com/Nilabh2121/Zopsmart_Assignment_Nilabhkumar/assets/74805255/d6e85699-5c3a-4743-a2d8-aa58e4c582e6)
 
 
