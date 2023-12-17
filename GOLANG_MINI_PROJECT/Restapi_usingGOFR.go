@@ -2,7 +2,7 @@ package main
 
 import "gofr.dev/pkg/gofr"
 
-func main() {
+func hello() {
 	app := gofr.New() // it initialize the gofr object
 
 	app.GET("/greetmessage", func(ctx *gofr.Context) (interface{}, error) {
